@@ -1,0 +1,308 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*General Styling*/
+body,html{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.clearfix::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/*General Typography*/
+h1{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 60px;
+	font-weight: 700;
+	color: #fff;
+}
+
+h2,h3{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	text-align: center;
+	color: #333;
+}
+
+p, ol{
+	font-family: 'Open Sans', sans-serif;
+	color: #333;
+}
+
+/*Navigation*/
+.menu ul{
+	list-style-type: none;
+	margin: 0px;
+	padding-right: 50px;
+	overflow: hidden;
+	background-color: #0d1928;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 100;
+}
+
+.menu li{
+	float: right;
+}
+
+.menu li a{
+	display: block;
+	padding: 18px 20px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
+
+li a:hover {
+	color: #d88e3f;
+}
+
+/*Hero*/
+.hero-image{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero-image.jpeg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	height: 100%;
+}
+
+.hero-image-text{
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*About*/
+#about{
+	background-color: #d88e3f;
+	padding: 100px 150px;
+}
+
+.about-box img{
+	float: left;
+	margin-right:20px;
+	border: 1px solid black;
+}
+
+/*Recipe Gallery*/
+#recipe-gallery{
+	padding: 100px 125px;
+}
+
+.gallery-box{
+	float: left;
+	width: 33.33%;
+	padding: 20px 10px;
+}
+
+.gallery-text p{
+	text-align: center;
+}
+
+.gallery-container{
+	position: relative;
+	overflow: hidden;
+}
+
+.image{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.overlay{
+	position: absolute;
+	top: 20px;
+	bottom: 20px;
+	left: 10px;
+	right: 10px;
+	opacity: 0;
+	transition: .4s ease;
+	background-color: rgba(13,25,40,.82);
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	transform: translateY(100%);
+}
+
+.gallery-container:hover .overlay{
+	opacity: 1;
+	-webkit-transform: translateY(0);
+  	-moz-transform: translateY(0);
+  	transform: translateY(0);
+}
+
+.text{
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+  	-webkit-transform: translate(-50%, -50%);
+ 	-ms-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+}
+
+.text a{
+	text-decoration: none;
+}
+
+/*Individual Recipe Pages*/
+.coverimage-chicken{
+	background-image: url(../img/chicken.jpeg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 50%;
+	position: relative;
+}
+
+.coverimage-pasta{
+	background-image: url(../img/pasta.jpeg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 50%;
+	position: relative;
+}
+
+.coverimage-salsa{
+	background-image: url(../img/salsa.jpeg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 50%;
+	position: relative;
+}
+
+.recipe{
+	float: left;
+	width: 50%;
+}
+
+.recipebox{
+	margin: 100px 150px;
+	padding: 50px;
+	background-color: #f7f7f7;
+}
+
+.recipetext{
+	margin: 100px 150px;
+	text-align: center;
+}
+
+.recipetext img{
+	height: 700px;
+	margin-top: 30px;
+}
+
+.recipe li span{
+	position: relative;
+	left: 10px;
+}
+
+.recipe ol{
+	margin: 30px;
+	line-height: 1.5em;
+}
+
+table#t01,table#t01 th,table#t01 td{
+	font-family: 'Open Sans', sans-serif;
+}
+
+table#t01{
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table#t01 td{
+	padding: 5px;
+	vertical-align: bottom;
+	border-bottom: 1px solid #ddd;
+}
+
+table#t01 tr:hover {
+	color: #d88e3f;
+}
+
+/*Citations*/
+#workscitedbox{
+	margin: 100px 150px;
+	text-align: center;
+}
+
+.workcitedtext{
+	margin: 200px 150px 0px;
+	text-align: center;
+}
+
+.button{
+	background-color: #ddd;
+    border: none;
+	height: 170px;
+	width: 170px;
+	margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button a{
+	text-decoration: none;
+	color: #333;
+}
+
+.button:hover{
+	background-color: #d88e3f;
+	color: #fff;
+}
+
+/*Footer*/
+.footer-text{
+	float: left;
+	background-color: #d88e3f;
+	width: 33.33%;
+	padding: 50px 10px;
+	text-align: center;
+	height: 150px;
+}
+
+.footer-text p{
+	color: #fff;
+}
+
+#wrapper{
+	/*Used to get footer to stick to bottom for works cited page*/
+	min-height: 100%;
+	position: relative;
+}
+#content{
+	/*Used to get footer to stick to bottom for works cited page*/
+	padding-bottom: 100px;
+}
+
+#footer{
+	/*Used to get footer to stick to bottom for works cited page*/
+	position: absolute;
+	bottom: 0;
+	width:100%;
+	left: 0;
+}
